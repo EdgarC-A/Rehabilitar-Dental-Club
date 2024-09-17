@@ -1,0 +1,517 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+/* Estilo del botón */
+#scrollButton {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none; /* Oculto inicialmente */
+}
+
+/* Opcional: Efecto de desvanecimiento */
+#scrollButton.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+}
+
+.loader::before {
+  content: "";
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#000 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 20% 100%;
+  animation: l1 1s infinite linear;
+}
+
+@keyframes l1 {
+  0% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+  33% {
+    background-size: 20% 10%, 20% 100%, 20% 100%;
+  }
+  50% {
+    background-size: 20% 100%, 20% 10%, 20% 100%;
+  }
+  66% {
+    background-size: 20% 100%, 20% 100%, 20% 10%;
+  }
+  100% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+/* HEADER INICIAL */
+.inicial {
+  padding: 15px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+}
+.info {
+  flex: 70%;
+}
+
+.info a {
+  text-decoration: none;
+  color: white;
+}
+.redes {
+  text-align: right;
+  flex: 30%;
+}
+.red1 {
+  color: white;
+}
+.icon-1:hover {
+  color: #979797;
+  transition: 0.2s linear;
+}
+/* FIN */
+
+/* BANNER Y NAVBAR */
+.logo {
+  width: 300px;
+}
+@media (max-width: 600px) {
+  .logo {
+    width: 80px;
+    border-radius: 50px;
+  }
+}
+.banner {
+  background-image: url(img-Formacion/rehabilitacion-implantes.jpeg) !important;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Cambia el valor de opacidad según lo necesites */
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2; /* Asegúrate de que el contenido esté por encima de la capa oscura */
+}
+/* .opcity {
+          background-color: black;
+        } */
+.navbar {
+  background-color: transparent !important;
+}
+
+#navbarNavAltMarkup {
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #31313186;
+}
+@media (max-width: 600px) {
+  #navbarNavAltMarkup {
+    background: none;
+  }
+}
+.container-fluid {
+  background-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .container-fluid {
+    background-color: #000000dc;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+.navbar-nav,
+a {
+  color: black;
+}
+#navbarNavAltMarkup {
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.062);
+  justify-content: right;
+}
+.nav-link {
+  color: white;
+  font-size: 1.2rem;
+}
+.navbar-collapse {
+  padding-bottom: 10px;
+}
+@media (max-width: 600px) {
+  #navbarNavAltMarkup {
+    background: none;
+  }
+}
+.navbar-toggler {
+  background-color: white;
+}
+
+.odon-div {
+  margin-left: 20px;
+}
+@media (max-width: 600px) {
+  .odon-div {
+    position: relative;
+    text-align: center;
+    top: 200px;
+    margin: 0px;
+  }
+}
+.odont {
+  position: relative;
+  color: white;
+  font: 3rem;
+}
+.odont-tex {
+  font-size: 1rem;
+  color: white;
+}
+.btn-secondary {
+  background-color: white;
+  color: black;
+  border: none;
+}
+/* IMG TABLET */
+.tablet-img {
+  display: flex;
+  min-height: auto;
+  justify-content: center;
+  margin: 100px 0px 0px 0px;
+}
+.tablet-img img {
+  width: 100px;
+}
+/* TITLE EMPRESA */
+.diplomad-header {
+  display: flex;
+  min-height: auto;
+  justify-content: center;
+}
+.diplomad-title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 40px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overline-p {
+  color: white;
+  font-size: 1rem;
+}
+
+.overline {
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.overline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-top: 2px solid black; /* Cambia el color y grosor según tu necesidad */
+}
+.text-central {
+  padding: 0px 50px 0px 50px;
+}
+@media (max-width: 600px) {
+  .text-central {
+    padding: 0px;
+  }
+}
+.text-parrafap {
+  text-align: center;
+}
+.text-parrafap:hover {
+  border-radius: 10px;
+  transition: 0.3s linear;
+  background-color: #313131;
+  color: white;
+}
+/* FIN */
+/* SECTION DESCRIPCION DIPLOMADOS */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+@media (max-width: 600px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 375px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
+
+.sub-div {
+  flex: 50%;
+}
+.schules {
+  text-align: center;
+  flex: 50%;
+}
+.sub-div {
+  flex-direction: column;
+}
+
+.list-group-item {
+  color: rgb(245, 245, 245);
+  background-color: #1d1d1d;
+  font-size: 0.7rem;
+}
+.list-group-item:hover {
+  color: #000000;
+  background-color: #ffffff;
+  transition: 0.2s linear;
+  transform: scale(1.02);
+}
+.material {
+  background-color: #313131;
+}
+.material li {
+  font-size: 11px;
+  color: white;
+}
+.material h3 {
+  color: white;
+}
+
+.objects h3 {
+  color: white;
+}
+.descrip h3 {
+  color: white;
+}
+.descrip,
+.material,
+.objects {
+  border-radius: 10px;
+  background-color: #313131;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.btn-primary {
+  border: #000000;
+  color: #000000;
+  background-color: white;
+  padding: 10px 50px 10px 50px;
+}
+.btn-prices {
+  margin-top: 30px;
+  display: flex;
+  min-height: auto;
+  justify-content: center;
+}
+.schules {
+  background-color: rgb(248, 248, 248);
+  border-radius: 20px;
+}
+.hoarios,
+h3 {
+  color: rgb(0, 0, 0);
+}
+.horarios ul {
+  justify-content: center;
+}
+
+.call {
+  margin-top: 40px;
+}
+.call-tel {
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 20px;
+  color: #ffffff;
+}
+.call-tel:hover {
+  background-color: #313131;
+  transition: 0.5s ease-in-out;
+}
+.ubication {
+  margin-top: 50px;
+}
+.map {
+  text-align: center;
+}
+
+/* FOOTER */
+
+.contenedor-footer {
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .contenedor-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.img-log img {
+  width: 100px;
+  text-align: center;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .img-log img {
+    margin-left: 0px;
+  }
+}
+.img-log,
+.employed,
+.sobre {
+  flex: 25%;
+  padding: 20px;
+  margin: 10px;
+}
+
+.img-log p {
+  color: white;
+  text-align: center;
+}
+.employed h4 {
+  color: white;
+}
+.li-fot,
+a {
+  text-decoration: none;
+  list-style: none;
+  margin-top: 10px;
+  color: white;
+}
+.li-fot a:hover {
+  color: #6b6b6b;
+  transition: 0.2s linear;
+}
+.sobre {
+  list-style: none;
+  margin-top: 10px;
+  color: white;
+}
+.red-footer {
+  display: flex;
+  min-height: auto;
+  align-items: center;
+}
+.red-footer h4 {
+  color: white;
+}
+.icon-3 {
+  padding: 5px;
+  margin-left: 10px;
+}
+.icon-3:hover {
+  color: #dbdbdb69;
+  transition: 0.2s linear;
+}
+.encabez-final {
+  background-color: #000000;
+  display: flex;
+  min-height: auto;
+  justify-content: center;
+}
+.encabez-final p {
+  padding: 30px;
+  color: white;
+}
+.black2 {
+  color: #ffffff;
+}
+.black2:hover {
+  color: #6abbe0;
+}
+.volantis-tcg {
+  width: 50px;
+}
+.volantis-tcg:hover {
+  transform: rotate(45deg);
+  transition: 0.2s linear;
+}
+.overline-final {
+  height: 1px;
+  background-color: white;
+}
+
+/* FIN */
